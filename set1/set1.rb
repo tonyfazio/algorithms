@@ -22,6 +22,19 @@ module Set1
   end
 
   def self.find_sum_2(array, sum = 0)
+    return false if array == []
+    for i in 0...array.length
+      if array[i] == 0
+        return true
+      elsif
+        for j in 0...array.length
+          if array[i] +array[j] ==0
+            return true
+          end
+        end
+      end
+    end
+    return false
   end
 
   def self.find_sum_3(array)
