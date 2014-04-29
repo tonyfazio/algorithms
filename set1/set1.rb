@@ -38,5 +38,19 @@ module Set1
   end
 
   def self.find_sum_3(array)
+    return false if array == []
+    for i in 0...array.length
+      if array[i] == 0
+        return true
+      end
+      for j in 1...array.length
+        for q in 2...array.length
+          if array[i]+array[j]+array[q] ==0
+            return true
+          end
+        end
+      end
+    end
+    return false
   end
 end
